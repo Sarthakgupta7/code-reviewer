@@ -24,18 +24,20 @@ main .left, main .right{
 main .left{
   background-color: black;
   position: relative;
+  overflow: auto;
 }
 main .left .review{
   position: absolute;
   bottom: 1rem;
   right: 1rem;
   background-color:rgb(224, 224, 238) ;
-  color: black;
+  color: rgb(19, 18, 18);
   padding: 0.5rem 2rem;
   font-weight: 500;
   cursor:pointer;
   border-radius: 0.7rem;
   user-select: none;
+  overflow: auto;
 }
 .left .code
 ,.code pre
@@ -45,14 +47,41 @@ main .left .review{
   margin: 0;
   border-radius: 0.7rem;
   background-color: #0c0c0c;
+  overflow: auto;
+  color: #f3f3f3;
 }
 main .right{
   background-color: rgb(64, 61, 61) ;
   padding: 1rem 2rem;
   overflow: auto;
+  color: aliceblue;
 }
 .headin{
   text-align: center;
   background-color: rgb(46, 40, 40);
   padding:7px;
+  color: #f3f3f3;
+}
+.spinner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #00d8ff;
+}
+
+.spinner {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #00d8ff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
